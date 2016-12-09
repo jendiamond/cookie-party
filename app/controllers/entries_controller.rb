@@ -2,13 +2,11 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   # GET /entries
-  # GET /entries.json
   def index
     @entries = Entry.all
   end
 
   # GET /entries/1
-  # GET /entries/1.json
   def show
   end
 
@@ -22,7 +20,6 @@ class EntriesController < ApplicationController
   end
 
   # POST /entries
-  # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
 
@@ -38,7 +35,6 @@ class EntriesController < ApplicationController
   end
 
   # PATCH/PUT /entries/1
-  # PATCH/PUT /entries/1.json
   def update
     respond_to do |format|
       if @entry.update(entry_params)
@@ -52,7 +48,6 @@ class EntriesController < ApplicationController
   end
 
   # DELETE /entries/1
-  # DELETE /entries/1.json
   def destroy
     @entry.destroy
     respond_to do |format|
