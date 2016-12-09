@@ -1,0 +1,2 @@
+class MostDecorativeVote < ApplicationRecord
+end

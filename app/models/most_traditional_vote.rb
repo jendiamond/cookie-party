@@ -1,0 +1,2 @@
+class MostTraditionalVote < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class MostDeliciousVote < ApplicationRecord
+end
