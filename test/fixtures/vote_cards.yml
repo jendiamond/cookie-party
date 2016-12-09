@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  best_in_show: 1
+  most_decorative: 1
+  most_delicious: 1
+  most_traditional: 1
+
+two:
+  name: MyString
+  best_in_show: 1
+  most_decorative: 1
+  most_delicious: 1
+  most_traditional: 1

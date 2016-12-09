@@ -1,0 +1,2 @@
+class VoteCard < ApplicationRecord
+end

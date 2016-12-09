@@ -1,0 +1,42 @@
+<%= form_for(vote_card) do |f| %>
+  <% if vote_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vote_card.errors.count, "error") %> prohibited this vote_card from being saved:</h2>
+
+      <ul>
+      <% vote_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :best_in_show %>
+    <%= f.number_field :best_in_show %>
+  </div>
+
+  <div class="field">
+    <%= f.label :most_decorative %>
+    <%= f.number_field :most_decorative %>
+  </div>
+
+  <div class="field">
+    <%= f.label :most_delicious %>
+    <%= f.number_field :most_delicious %>
+  </div>
+
+  <div class="field">
+    <%= f.label :most_traditional %>
+    <%= f.number_field :most_traditional %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

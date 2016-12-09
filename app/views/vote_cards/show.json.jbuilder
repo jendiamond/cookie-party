@@ -1,0 +1,1 @@
+json.partial! "vote_cards/vote_card", vote_card: @vote_card

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vote_card.name %>
+</p>
+
+<p>
+  <strong>Best in show:</strong>
+  <%= @vote_card.best_in_show %>
+</p>
+
+<p>
+  <strong>Most decorative:</strong>
+  <%= @vote_card.most_decorative %>
+</p>
+
+<p>
+  <strong>Most delicious:</strong>
+  <%= @vote_card.most_delicious %>
+</p>
+
+<p>
+  <strong>Most traditional:</strong>
+  <%= @vote_card.most_traditional %>
+</p>
+
+<%= link_to 'Edit', edit_vote_card_path(@vote_card) %> |
+<%= link_to 'Back', vote_cards_path %>
