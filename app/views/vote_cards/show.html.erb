@@ -1,28 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+  <%= @vote_card.name %>'s Vote Card
+</h1>
+
 <p>
-  <strong>Name:</strong>
-  <%= @vote_card.name %>
+  <strong>Best in Show: </strong>
+  <%= @vote_card.best_in_show.cookie %>
 </p>
 
 <p>
-  <strong>Best in show:</strong>
-  <%= @vote_card.best_in_show %>
+  <strong>Most Delicious: </strong>
+  <%= @vote_card.most_delicious.cookie %>
 </p>
 
 <p>
-  <strong>Most decorative:</strong>
-  <%= @vote_card.most_decorative %>
+  <strong>Most Decorative: </strong>
+  <%= @vote_card.most_decorative.cookie %>
 </p>
 
 <p>
-  <strong>Most delicious:</strong>
-  <%= @vote_card.most_delicious %>
-</p>
-
-<p>
-  <strong>Most traditional:</strong>
-  <%= @vote_card.most_traditional %>
+  <strong>Most Traditional: </strong>
+  <%= @vote_card.most_traditional.cookie %>
 </p>
 
 <%= link_to 'Edit', edit_vote_card_path(@vote_card) %> |

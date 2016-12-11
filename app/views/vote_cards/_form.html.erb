@@ -1,42 +1,56 @@
-<%= form_for(vote_card) do |f| %>
-  <% if vote_card.errors.any? %>
+<%= form_for(@vote_card) do |f| %>
+  <% if @vote_card.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(vote_card.errors.count, "error") %> prohibited this vote_card from being saved:</h2>
+      <h2><%= pluralize(@vote_card.errors.count, "error") %> prohibited this vote_card from being saved:</h2>
 
       <ul>
-      <% vote_card.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @vote_card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <div id="voter"><%= f.label :name, "Your Name" %><br />
+    <%= f.text_field :name %></div>
   </div>
-
-  <div class="field">
-    <%= f.label :best_in_show %>
-    <%= f.number_field :best_in_show %>
-  </div>
-
-  <div class="field">
-    <%= f.label :most_decorative %>
-    <%= f.number_field :most_decorative %>
-  </div>
-
-  <div class="field">
-    <%= f.label :most_delicious %>
-    <%= f.number_field :most_delicious %>
-  </div>
-
-  <div class="field">
-    <%= f.label :most_traditional %>
-    <%= f.number_field :most_traditional %>
-  </div>
-
-  <div class="actions">
+  <div id="voter">Your Votes</div>
+  <table>
+    <tr>
+      <td id="superlatives" style="width:250px;">
+        <div id="vote">&#10057; <%= f.label :best_in_show_id, "Best in Show" %></div>
+      </td>
+      <td id="superlatives" style="width:250px;">
+        &#10057; <%= f.collection_select :best_in_show_id, @entries, :id, :cookie %>
+      <td>
+    </tr>
+    <tr>
+      <td id="superlatives" style="width:250px;">
+        <div id="vote">&#10057; <%= f.label :most_delicious_id, "Most Delicious" %></div>
+      </td>
+      <td id="superlatives" style="width:250px;">
+        &#10057; <%= f.collection_select :most_delicious_id, @entries, :id, :cookie %>
+      <td>
+    </tr>
+    <tr>
+      <td id="superlatives" style="width:250px;">
+        <div id="vote">&#10057; <%= f.label :most_decorative_id, "Most Decorative" %></div>
+      </td>
+      <td id="superlatives" style="width:250px;">
+        &#10057; <%= f.collection_select :most_decorative_id, @entries, :id, :cookie %>
+      <td>
+    </tr>
+    <tr>
+      <td id="superlatives" style="width:250px;">
+        <div id="vote">&#10057; <%= f.label :most_traditional_id, "Most Traditional" %></div>
+      </td>
+      <td id="superlatives" style="width:250px;">
+        &#10057; <%= f.collection_select :most_traditional_id, @entries, :id, :cookie %>
+      <td>
+    </tr>
+  </table>
+  <div class="actions" style="background-color:#6cf; padding: 5px 5px 5px 5px; border-color:#686868;  border-style:solid; border-width:2px;">
     <%= f.submit %>
   </div>
 <% end %>

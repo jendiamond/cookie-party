@@ -26,11 +26,9 @@ class VoteCardsController < ApplicationController
 
     respond_to do |format|
       if @vote_card.save
-        format.html { redirect_to @vote_card, notice: 'Vote card was successfully created.' }
-        format.json { render :show, status: :created, location: @vote_card }
+        format.html { redirect_to @vote_card, notice: 'VoteCard was successfully created.' }
       else
-        format.html { render :new }
-        format.json { render json: @vote_card.errors, status: :unprocessable_entity }
+        format.html { render action: 'new' }
       end
     end
   end
@@ -39,35 +37,30 @@ class VoteCardsController < ApplicationController
   def update
     respond_to do |format|
       if @vote_card.update(vote_card_params)
-        format.html { redirect_to @vote_card, notice: 'Vote card was successfully updated.' }
-        format.json { render :show, status: :ok, location: @vote_card }
+        format.html { redirect_to @vote_card, notice: 'VoteCard was successfully updated.' }
       else
-        format.html { render :edit }
-        format.json { render json: @vote_card.errors, status: :unprocessable_entity }
+        format.html { render action: 'edit' }
       end
     end
   end
 
   # DELETE /vote_cards/1
+  # DELETE /vote_cards/1.json
   def destroy
     @vote_card.destroy
     respond_to do |format|
-      format.html { redirect_to vote_cards_url, notice: 'Vote card was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to vote_cards_url }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_vote_card
       @vote_card = VoteCard.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def vote_card_params
-      params.require(:vote_card).permit(:name, :best_in_show, :most_decorative, :most_delicious, :most_traditional)
+      params.require(:vote_card).permit(:name, :best_in_show_id, :most_delicious_id, :most_decorative_id, :most_traditional_id)
     end
-
     def load_entries
       @entries = Entry.all
     end

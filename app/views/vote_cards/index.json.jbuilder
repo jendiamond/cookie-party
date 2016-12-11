@@ -1,1 +1,0 @@
-json.array! @vote_cards, partial: 'vote_cards/vote_card', as: :vote_card
