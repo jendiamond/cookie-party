@@ -1,5 +1,12 @@
 body {
   background-color: white;
+  background: linear-gradient(
+    45deg, 
+    white 25%, #CD0000 25%,
+    #CD0000 50%, white 50%,
+    white 75%, #CD0000 75%,
+    #CD0000);
+  background-size:50px 50px;
 }
 
 p {
