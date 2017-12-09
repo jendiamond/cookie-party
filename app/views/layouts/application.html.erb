@@ -5,18 +5,22 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <supports-screens
+      android:smallScreens="false"
+      android:normalScreens="false"
+      android:largeScreens="true"
+      android:xlargeScreens="true"
+      android:requiresSmallestWidthDp="533"/>
   </head>
   <body>
-    <div id="cookie_app_border">
       <div id = "cp_container">
         <div id="header_image">
-          <%= link_to (image_tag("ludwig_family_cookie_party2017.png", :alt => "Ludwig Family Cookie Party")), "/" %>
+          <%= link_to (image_tag("ludwig_family_cookie_party2017.png", :alt => "Ludwig Family Cookie Party", :width => '100%')), "/" %>
         </div> <!-- close header_image -->
         <div id="menu"><%= link_to 'VOTE', new_vote_card_path %> &nbsp; <%= link_to 'ALL VOTES', vote_cards_path %> &nbsp; <%= link_to 'ENTER A COOKIE', new_entry_path %> &nbsp; <%= link_to 'ALL ENTRIES', entries_path %></div>
         <div id="blurb">
           <%= yield %> <!-- inserts view code here -->
         </div> <!-- blurb -->
-      </div> <!-- cookie_app_border -->
     </div> <!-- cp_container -->
   </body>
 </html>
