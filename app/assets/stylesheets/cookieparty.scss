@@ -13,6 +13,58 @@ p {
   color: #666;
 }
 
+
+
+li {
+  font-family: Helvetica;
+}
+.field {
+  color: #396;
+  font-size: 200%;
+  font-style: bold;
+}
+
+#entry_cookie{
+  width: 80%;
+  border: 1px solid #999999;
+  padding: 5px; 
+}
+
+#entry_baker{
+  width: 80%;
+  border: 1px solid #999999;
+  padding: 5px; 
+}
+
+#vote_card_name{
+  width: 50%;
+  border: 1px solid #999999;
+  padding: 5px; 
+}
+
+input[type=submit] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 150%;
+    border-radius: 15px;
+}
+input[type=submit]:hover {
+    background-color: #528B8B; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 150%;
+    border-radius: 15px;
+}
+
 #cookie_app_border {
   width:550px;
   padding: 15px 5px;
@@ -35,7 +87,7 @@ p {
 #menu {
   background-color:#6cf;
   padding: 5px 5px 5px 5px;
-  width:490px;
+  width:80%px;
   margin: 0 auto;
   }
 
@@ -43,6 +95,12 @@ p {
   padding: 5px 5px 5px 5px;
   width:600px;
   margin: 0 auto;
+  }
+
+h1 {
+  color: #396;
+  font-size: 200%;
+  margin:0px;
   }
 
 h2 {
@@ -57,19 +115,41 @@ h2 {
   
 #voter {
   color: #C30;
-  font-size: 150%;
+  font-size: 100%;
+  font-style: bold;
   }
+
+nav {
+a:link {
+  color:#fff;
+  font-family:"Helvetica", sans serif;
+  font-size:150%;
+  text-decoration: none;
+  }
+a:visited {
+  color:#ffc;
+  }
+a:hover {
+  color:#545454; 
+  background-color:#6cf;
+  }
+a:active {
+  color:#fff;
+  }
+}
+
 
 a:link {
   color:#545454;
-  font-family:"Times New Roman", Times, serif;
-  font-weight:bold;
+  font-family:"Helvetica", sans serif;
+  font-size: 100%;
+  text-decoration: none;
   }
 a:visited {
   color:#545454;
   }
 a:hover {
-  color:#FFF; 
+  color:#40843a; 
   background-color:#6cf;
   }
 a:active {
@@ -127,6 +207,40 @@ hr {
   height: 2px;
   }
 
-.superlatives {
-  width:250px;
+#superlatives {
+  width:80%px;
+  font-size: 120%;
+}
+
+#voting_directions {
+  margin-top:0px;
+  margin-bottom:5px;
+}
+
+#vote_card_best_in_show_id {
+  width: 80%;
+  height: 80%;
+  font-size: 100%;
+}
+
+#vote_card_most_delicious_id {
+  width: 80%;
+  height: 80%;
+  font-size: 100%;
+}
+
+#vote_card_most_decorative_id {
+  width: 80%;
+  height: 80%;
+  font-size: 100%;
+}
+
+#vote_card_most_traditional_id {
+  width: 80%;
+  height: 80%;
+  font-size: 100%;
+}
+
+#column1 {
+    width: 80%;
 }

@@ -2,7 +2,7 @@
 
 <h1>Entries</h1>
 
-<table>
+<table id="table">
   <thead>
     <tr>
       <th>Cookie</th>
@@ -13,9 +13,9 @@
 
   <tbody>
     <% @entries.each do |entry| %>
-      <tr>
-        <td><%= entry.cookie %></td>
-        <td><%= entry.baker %></td>
+      <tr id="row1">
+        <td id="column1"><%= entry.cookie %></td>
+        <td id="column1"><%= entry.baker %></td>
         <td><%= link_to 'Show', entry %></td>
         <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
         <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>

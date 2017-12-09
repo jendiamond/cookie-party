@@ -16,42 +16,42 @@
     <%= f.text_field :name %></div>
   </div>
   <br/>
-  <div id="voter">Your Votes</div>
+  <h1>Your Votes</h1>
   <table>
     <tr>
-      <td id="superlatives" style="width:250px;">
-        <div id="vote">&#10057; <%= f.label :best_in_show_id, "Best in Show" %></div>
+      <td id="superlatives"">
+        <div id="vote">&#9731; <%= f.label :best_in_show_id, "Best in Show" %></div>
       </td>
-      <td id="superlatives" style="width:250px;">
-        &#10057; <%= f.collection_select :best_in_show_id, @entries, :id, :cookie %>
+      <td id="superlatives">
+        &#9731; <%= f.collection_select :best_in_show_id, @entries, :id, :cookie %>
+      <td>
+    </tr>
+    <tr>
+      <td id="superlatives">
+        <div id="vote">&#10052; <%= f.label :most_delicious_id, "Most Delicious" %></div>
+      </td>
+      <td id="superlatives">
+        &#10052; <%= f.collection_select :most_delicious_id, @entries, :id, :cookie %>
       <td>
     </tr>
     <tr>
       <td id="superlatives" style="width:250px;">
-        <div id="vote">&#10057; <%= f.label :most_delicious_id, "Most Delicious" %></div>
+        <div id="vote"> &#9731; <%= f.label :most_decorative_id, "Most Decorative" %></div>
       </td>
       <td id="superlatives" style="width:250px;">
-        &#10057; <%= f.collection_select :most_delicious_id, @entries, :id, :cookie %>
+        &#9731; <%= f.collection_select :most_decorative_id, @entries, :id, :cookie %>
       <td>
     </tr>
     <tr>
       <td id="superlatives" style="width:250px;">
-        <div id="vote">&#10057; <%= f.label :most_decorative_id, "Most Decorative" %></div>
+        <div id="vote">&#10052; <%= f.label :most_traditional_id, "Most Traditional" %></div>
       </td>
       <td id="superlatives" style="width:250px;">
-        &#10057; <%= f.collection_select :most_decorative_id, @entries, :id, :cookie %>
-      <td>
-    </tr>
-    <tr>
-      <td id="superlatives" style="width:250px;">
-        <div id="vote">&#10057; <%= f.label :most_traditional_id, "Most Traditional" %></div>
-      </td>
-      <td id="superlatives" style="width:250px;">
-        &#10057; <%= f.collection_select :most_traditional_id, @entries, :id, :cookie %>
+        &#10052; <%= f.collection_select :most_traditional_id, @entries, :id, :cookie %>
       <td>
     </tr>
   </table>
-  <div class="actions" style="background-color:#6cf; padding: 5px 5px 5px 5px; border-color:#686868;  border-style:solid; border-width:2px;">
+  <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
